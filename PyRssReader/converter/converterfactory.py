@@ -1,4 +1,5 @@
-from converter.converter import CutConverter, ReplaceConverter
+from converter.cutconverter import CutConverter
+from converter.replaceconverter import ReplaceConverter
 
 class ConverterFactory:
     """
