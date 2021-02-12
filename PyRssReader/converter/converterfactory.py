@@ -1,15 +1,16 @@
 from converter.cutconverter import CutConverter
 from converter.replaceconverter import ReplaceConverter
+from converter.convertertype import ConverterType
 
 class ConverterFactory:
     """
     """
     @staticmethod
-    def createConverter(converter_info):
-        if ('cut' == converter_info):
+    def createConverter(converter_type, converter_arg):
+        if (converter_type == ConverterType.CUT):
             return CutConverter()
-        elif converter_info.startswith('replace'):
-            return ReplaceConverter(converter_info[8:-1])
+        elif (converter_type == ConverterType.REPLACE):
+            return ReplaceConverter(converter_arg)
         else:
             raise
 

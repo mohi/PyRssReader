@@ -12,19 +12,22 @@ class Pipeline:
     def __repr__(self):
         pass
 
-    def setInputReader(self, input_src, input_type):
-        self.__input_reader = InputReaderFactory.createInputReader(input_src, input_type)
+    def setInputReader(self, input_info):
+        self.__input_reader = InputReaderFactory.createInputReader(input_info.type, input_info.src)
 
-    def setOutputWriter(self, output_src, output_type):
-        self.__output_reader = OutputWriterFactory.createOutputWriter(output_src, output_type)
+    def setOutputWriter(self, output_info):
+        self.__output_reader = OutputWriterFactory.createOutputWriter(output_info.type, output_info.src)
 
-    def setConverters(self, converters):
-        self.__converters = []
-        for converter in converters:
-            self.__converters.append(ConverterFactory.createConverter(converter))
+    def setConverters(self, convert_info):
+        self.__num_converts = len(convert_info)
+        self.__first_converter = ConverterFactory.createConverter(convert_info[0].type, convert_info[0].arg)
+        if self.__num_converts>1:
+            self.__second_converter = ConverterFactory.createConverter(convert_info[1].type, convert_info[1].arg)
+
 
     def run(self):
         content = self.__input_reader.read()
-        for converter in self.__converters:
-            content = converter.process(content)
+        content = self.__first_converter.process(content)
+        if self.__num_converts>1:
+            content = self.__second_converter.process(content)
         self.__output_reader.write(content)
