@@ -11,10 +11,10 @@ class Runner:
         args = cmdline_parser.inferArgs()
         from pipeline import Pipeline
         job_pipe = Pipeline()
-        job_pipe.setInputSource(args.input_src, \
+        job_pipe.setInputReader(args.input_src, \
                              args.input_type)
         job_pipe.setConverters(args.convert)
-        job_pipe.setOutputDestination(args.output_src, \
+        job_pipe.setOutputWriter(args.output_src, \
                                    args.output_type)
         print(job_pipe.__dict__)
         job_pipe.run()
@@ -27,9 +27,9 @@ class Runner:
                    output_type = 'file', \
                    ):
         job_pipe = Pipeline()
-        job_pipe.setInputSource(input_src, input_type)
+        job_pipe.setInputReader(input_src, input_type)
         job_pipe.setConverters(converters)
-        job_pipe.setOutputDestination(output_src, output_type)
+        job_pipe.setOutputWriter(output_src, output_type)
         print(job_pipe.__dict__)
         job_pipe.run()
 
