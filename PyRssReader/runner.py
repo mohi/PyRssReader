@@ -17,17 +17,3 @@ class Runner:
         print(job_pipe.__dict__)
         job_pipe.run()
 
-    def runManual(self, \
-                   input_src = 'http://tech.uzabase.com/', \
-                   input_type = 'url', \
-                   converters = ['cut', 'replace(/abc/def/)'], \
-                   output_src = 'result.txt', \
-                   output_type = 'file', \
-                   ):
-        job_pipe = Pipeline()
-        job_pipe.setInputReader(args.input_info)
-        job_pipe.setConverters(args.convert_info)
-        job_pipe.setOutputWriter(args.output_info)
-        print(job_pipe.__dict__)
-        job_pipe.run()
-
