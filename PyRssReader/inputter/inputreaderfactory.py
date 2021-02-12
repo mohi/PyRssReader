@@ -1,4 +1,5 @@
-from textio.inputreader import UrlInputReader, FileInputReader
+from inputter.fileinputreader import FileInputReader
+from inputter.urlinputreader import UrlInputReader
 
 class InputReaderFactory:
     """

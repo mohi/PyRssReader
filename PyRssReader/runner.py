@@ -1,4 +1,4 @@
-from cli_parser import CliParserBuilder
+from cmdline_parser import CmdlineParserBuilder
 
 class Runner:
     """
@@ -6,9 +6,9 @@ class Runner:
     def __init__(self):
         pass
 
-    def run_cli(self):
-        cli_parser = CliParserBuilder().build()
-        args = cli_parser.infer_args()
+    def runCmdline(self):
+        cmdline_parser = CmdlineParserBuilder().build()
+        args = cmdline_parser.inferArgs()
         from pipeline import Pipeline
         job_pipe = Pipeline()
         job_pipe.setInputSource(args.input_src, \
@@ -19,7 +19,7 @@ class Runner:
         print(job_pipe.__dict__)
         job_pipe.run()
 
-    def run_manual(self, \
+    def runManual(self, \
                    input_src = 'http://tech.uzabase.com/', \
                    input_type = 'url', \
                    converters = ['cut', 'replace(/abc/def/)'], \

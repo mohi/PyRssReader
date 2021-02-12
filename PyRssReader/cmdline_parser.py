@@ -1,10 +1,10 @@
 import argparse
 
-class CliParser(argparse.ArgumentParser):
+class CmdlineParser(argparse.ArgumentParser):
     """
     """
-    def infer_args(self):
-        self.args = super(CliParser, self).parse_args()
+    def inferArgs(self):
+        self.args = super(CmdlineParser, self).parse_args()
         if self.args.input:
             if self.args.input.endswith('.txt'):
                 self.args.input_src = self.args.input
@@ -30,20 +30,18 @@ class CliParser(argparse.ArgumentParser):
             self.args.convert = self.args.convert.split(',')
         return self.args
 
-
-
-class CliParserBuilder():
+class CmdlineParserBuilder():
     """
     """
     def __init__(self):
         pass
 
     def build(self):
-        self.CliParser = CliParser()
-        self.CliParser.add_argument("--input", "-i", \
+        self.cmd_parser = CmdlineParser()
+        self.cmd_parser.add_argument("--input", "-i", \
                          help="input url or file path")
-        self.CliParser.add_argument("--convert", "-c", \
+        self.cmd_parser.add_argument("--convert", "-c", \
                          help="functions to apply on input")
-        self.CliParser.add_argument("--output", "-o", \
+        self.cmd_parser.add_argument("--output", "-o", \
                          help="output path")
-        return self.CliParser
+        return self.cmd_parser

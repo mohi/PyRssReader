@@ -1,6 +1,6 @@
+from inputter.inputreaderfactory import InputReaderFactory
 from converter.converterfactory import ConverterFactory
-from textio.inputreaderfactory import InputReaderFactory
-from textio.outputwriterfactory import OutputWriterFactory
+from outputter.outputwriterfactory import OutputWriterFactory
 
 class Pipeline:
     """

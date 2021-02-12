@@ -1,4 +1,5 @@
-from textio.outputwriter import FileOutputWriter, StdOutputWriter
+from outputter.fileoutputwriter import FileOutputWriter
+from outputter.stdoutputwriter import StdOutputWriter
 
 class OutputWriterFactory:
     """
