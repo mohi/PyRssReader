@@ -16,7 +16,6 @@ class Runner:
         args = cmdline_parser.parse_args()
         job_pipe = Pipeline()
         job_pipe.setInputReader(args.input_info)
-        print(args.convert_info)
         job_pipe.setConverters(args.convert_info)
         job_pipe.setOutputWriter(args.output_info)
         job_pipe.run()
