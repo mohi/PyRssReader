@@ -1,8 +1,6 @@
 PyRssReader
 ===========
 
-![image](https://img.shields.io/pypi/v/PyRssReader.svg%0A%20:target:%20https://pypi.python.org/pypi/PyRssReader%0A%20:alt:%20Latest%20PyPI%20version)
-
 [![Latest Travis CI build status](https://travis-ci.org/kragniz/cookiecutter-pypackage-minimal.png)](https://travis-ci.org/kragniz/cookiecutter-pypackage-minimal)
 
 Sample RSS Reader to perform multiple text processing on text. Reads
@@ -40,12 +38,11 @@ optional arguments:
                         output path
 ```
 
-Assumptions ----------1. Input file articles.txt is a xml file which
-meets the rss specification 2. URL points to the base url of the RSS
-feed. RSS feed url can be found out by appending ‘feed/‘ 3. CUT function
-will be applied on the tag `<title>` and `<summary>` of the rss xml file
-4. REPLACE function will be applied on the text inside the tags
-`<title>`, `<subtitle>`, `<author>`, `<content>`, etc inside of xml file
+## Assumptions
+1. Input file articles.txt is a xml file which meets the rss specification 
+2. URL points to the base url of the RSS feed. RSS feed url can be found out by appending ‘feed/‘ 
+3. CUT function will be applied on the tag `<title>` and `<summary>` of the rss xml file
+4. REPLACE function will be applied on the text inside the tags `<title>`, `<subtitle>`, `<author>`, `<content>`, etc inside of xml file
 
 Installation
 ------------
