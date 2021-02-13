@@ -13,7 +13,7 @@ Implementation
 -   Objects have been heavily used for separation of concerns
 -   Code reusability and extensibility have been given extra importance.
 
-![Class Diagram](class_diagram.png)
+![Class Diagram](class-diagram.png)
 
 Usage
 -----
