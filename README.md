@@ -7,14 +7,6 @@ Sample RSS Reader to perform multiple text processing on text. Reads
 from a variety of inputs sources and Writes to a variety of outputs
 desination are supported.
 
-Implementation
---------------
-
--   Objects have been heavily used for separation of concerns
--   Code reusability and extensibility have been given extra importance.
-
-![Class Diagram](class-diagram.png)
-
 Usage
 -----
 
@@ -39,8 +31,7 @@ optional arguments:
   --output OUTPUT, -o OUTPUT
                         output path
 ```
-
-## Assumptions
+#### Assumptions
 1. Input file articles.txt is a xml file which meets the rss specification 
 2. URL points to the base url of the RSS feed. RSS feed url can be found out by appending ‘feed/‘ 
 3. CUT function will be applied on the tag `<title>` and `<summary>` of the rss xml file
@@ -52,6 +43,16 @@ Installation
 ``` {.sourceCode .}
 python setup.py install
 ```
+
+Implementation
+--------------
+
+-   Objects have been heavily used for separation of concerns
+-   Code reusability and extensibility have been given extra importance.
+
+Class Diagram
+--------------
+![Class Diagram](class-diagram.png)
 
 Authors
 -------
