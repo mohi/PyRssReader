@@ -1,4 +1,6 @@
 from enum import Enum
+
+
 class InputType(Enum):
     """
     Defines the naming for input
@@ -8,4 +10,3 @@ class InputType(Enum):
     NONE = 0
     FILE = 1
     URL = 2
-

@@ -19,5 +19,4 @@ class Runner:
         print(args.convert_info)
         job_pipe.setConverters(args.convert_info)
         job_pipe.setOutputWriter(args.output_info)
-        print(job_pipe.__dict__)
         job_pipe.run()

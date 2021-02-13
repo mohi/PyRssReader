@@ -1,5 +1,6 @@
 from PyRssReader.converter.converterabstract import ConverterAbstract
 
+
 class CutConverter(ConverterAbstract):
     """
     Implements text processor which trims
@@ -24,5 +25,3 @@ class CutConverter(ConverterAbstract):
 
         # create text back from xmltree
         return self.xmlToText()
-
-

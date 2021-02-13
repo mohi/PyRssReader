@@ -1,6 +1,7 @@
 from PyRssReader.converter.converterabstract import ConverterAbstract
 import re
 
+
 class ReplaceConverter(ConverterAbstract):
     """
     Implements data processor which replaces
@@ -19,9 +20,9 @@ class ReplaceConverter(ConverterAbstract):
         # for every tag inside xmltree
         for elem in __xmltree.iter():
             # if tag of element is of title and summary
-            if (elem.tag.split('}')[-1] in ['title', 'subtitle', 'author', 'summary', 'content']):
+            if (elem.tag.split('}')[-1]
+                    in ['title', 'subtitle', 'author', 'summary', 'content']):
                 elem.text = re.sub(__regex_find, __regex_replace, elem.text)
 
         # create text back from xmltree
         return self.xmlToText()
-
