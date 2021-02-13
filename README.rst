@@ -15,9 +15,10 @@ Usage
 -----
 
 Sample command
-```
+
+``
 python PyRssReader --input http://tech.uzabase.com/ --convert="cut,replace(/base/acid/)" -o tmp.txt
-```
+``
 
 Assumptions
 ----------
