@@ -9,7 +9,7 @@ PyRssReader
    :target: https://travis-ci.org/kragniz/cookiecutter-pypackage-minimal
    :alt: Latest Travis CI build status
 
-Sample RSS Reader to perform multiple text processing on text. Input Read and Output Write supports multiple sources & destinations.
+Sample RSS Reader to perform multiple text processing on text. Reads from a variety of inputs sources and Writes to a variety of outputs desination are supported. 
 
 Usage
 -----
@@ -19,6 +19,22 @@ Sample command
 .. code-block::
 
   python PyRssReader --input http://tech.uzabase.com/ --convert="cut,replace(/base/acid/)" -o tmp.txt
+  python PyRssReader --input http://tech.uzabase.com/ --convert=cut
+  python PyRssReader --input articles.txt --convert="replace(/Uzabase/uzabase/)" -o out.txt
+  
+.. code-block::
+
+    ▶ python PyRssReader --help
+    usage: PyRssReader [-h] [--input INPUT] [--convert CONVERT] [--output OUTPUT]
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      --input INPUT, -i INPUT
+                            input url or file path
+      --convert CONVERT, -c CONVERT
+                            functions to apply on input
+      --output OUTPUT, -o OUTPUT
+                            output path
 
 Assumptions
 ----------
@@ -29,15 +45,10 @@ Assumptions
    
 Installation
 ------------
+.. code-block::
 
-Requirements
-^^^^^^^^^^^^
+  python setup.py install
 
-Compatibility
--------------
-
-Licence
--------
 
 Authors
 -------
