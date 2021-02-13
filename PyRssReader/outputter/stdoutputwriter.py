@@ -1,9 +1,11 @@
-from outputter.outputwriterinterface import OutputWriterInterface
+from PyRssReader.outputter.outputwriterinterface import OutputWriterInterface
 
 class StdOutputWriter(OutputWriterInterface):
     """
-    Write text to std out
+    Implements class to write text
+    to std out
     """
+
     def __init__(self):
         pass
 

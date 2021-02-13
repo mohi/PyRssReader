@@ -1,15 +1,14 @@
-from inputter.inputreaderfactory import InputReaderFactory
-from converter.converterfactory import ConverterFactory
-from outputter.outputwriterfactory import OutputWriterFactory
+from PyRssReader.inputter.inputreaderfactory import InputReaderFactory
+from PyRssReader.converter.converterfactory import ConverterFactory
+from PyRssReader.outputter.outputwriterfactory import OutputWriterFactory
 
 class Pipeline:
     """
-    Pipeline for taking input and applying converter and then outputting
+    Implments pipeline for fetching input and
+    applying converter and then outputting
     """
-    def __init__(self):
-        pass
 
-    def __repr__(self):
+    def __init__(self):
         pass
 
     def setInputReader(self, input_info):

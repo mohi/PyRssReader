@@ -1,19 +1,23 @@
 import argparse
-from inputter.inputtype import InputType
-from converter.convertertype import ConverterType
-from outputter.outputtype import OutputType
+from PyRssReader.inputter.inputtype import InputType
+from PyRssReader.converter.convertertype import ConverterType
+from PyRssReader.outputter.outputtype import OutputType
 from collections import namedtuple
 
 class CmdlineParser(argparse.ArgumentParser):
     """
+    Implements parser to fetch user command line
+    inputs and infer them
     """
+
     @staticmethod
     def inferConvert(converter_text):
         __ConvertInfo = namedtuple('converterinfo', ['type', 'arg'])
+        converter_text = converter_text.strip()
         if ('cut' == converter_text):
             return __ConvertInfo(ConverterType.CUT, None)
         elif converter_text.startswith('replace'):
-            return __ConvertInfo(ConverterType.REPLACE, converter_text[8:-1])
+            return __ConvertInfo(ConverterType.REPLACE, converter_text[9:-2])
         else:
             raise
 
@@ -42,7 +46,7 @@ class CmdlineParser(argparse.ArgumentParser):
         else:
             self.__args.output_info = self.__OutputInfo(OutputType.STDOUT, None)
 
-    def inferArgs(self):
+    def parse_args(self):
         self.__args = super(CmdlineParser, self).parse_args()
         self.__inferInput()
         self.__inferOutput()
@@ -51,6 +55,8 @@ class CmdlineParser(argparse.ArgumentParser):
 
 class CmdlineParserBuilder():
     """
+    Implements builder for creating
+    command line parser
     """
     def __init__(self):
         pass

@@ -1,9 +1,10 @@
-from inputter.inputreaderinterface import InputReaderInterface
+from PyRssReader.inputter.inputreaderinterface import InputReaderInterface
 
 class FileInputReader(InputReaderInterface):
     """
-    Read text from file
+    Implement file reader for text input
     """
+
     def __init__(self, input_src):
         self.__src_file = input_src
 

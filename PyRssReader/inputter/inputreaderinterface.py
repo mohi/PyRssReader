@@ -2,8 +2,9 @@ import abc
 
 class InputReaderInterface(metaclass=abc.ABCMeta):
     """
-    Base class to read inputs
+    Defines interface of text input readers
     """
+
     @classmethod
     def __subclasshook__(cls, subclass):
         return (hasattr(subclass, 'read') and

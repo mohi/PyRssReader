@@ -1,9 +1,11 @@
-from outputter.outputwriterinterface import OutputWriterInterface
+from PyRssReader.outputter.outputwriterinterface import OutputWriterInterface
 
 class FileOutputWriter(OutputWriterInterface):
     """
-    Write text to output file
+    Implements module for Write text to
+    output file on the disk
     """
+
     def __init__(self, output_src):
         self.__output_file = output_src
 

@@ -2,8 +2,9 @@ import abc
 
 class OutputWriterInterface(metaclass=abc.ABCMeta):
     """
-    Base class to write outputs
+    Defines interface for specification to write outputs
     """
+
     @classmethod
     def __subclasshook__(cls, subclass):
         return (hasattr(subclass, 'write') and

@@ -1,3 +1,4 @@
-from runner import Runner
+from PyRssReader.runner import Runner
+
 if __name__ == "__main__":
     Runner().runCmdline()
