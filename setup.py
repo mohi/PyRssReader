@@ -23,7 +23,7 @@ setup(
     author_email="mohitleoagrawal@gmail.com",
 
     description="Sample RSS Reader to perform multiple text processing on text. Input Read and Output Write supports multiple sources & destinations.",
-    long_description=read("README.rst"),
+    long_description=read("README.md"),
 
     packages=find_packages(exclude=('tests',)),
 
