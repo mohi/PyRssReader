@@ -13,7 +13,7 @@ class ReplaceConverter(ConverterAbstract):
 
     def process(self, text: str) -> str:
         # create xmltree from text
-        __xmltree = self.textToXml(text)
+        __xmltree = self._textToXml(text)
 
         __regex_find, __regex_replace = self.__regex_form.split('/')
 
@@ -25,4 +25,4 @@ class ReplaceConverter(ConverterAbstract):
                 elem.text = re.sub(__regex_find, __regex_replace, elem.text)
 
         # create text back from xmltree
-        return self.xmlToText()
+        return self._xmlToText()

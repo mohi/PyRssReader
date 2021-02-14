@@ -18,7 +18,7 @@ class ConverterAbstract(metaclass=abc.ABCMeta):
         """process text from input"""
         raise NotImplementedError
 
-    def textToXml(self, text):
+    def _textToXml(self, text):
         # preserve xml namespaces
         # find namespaces
         namespaces = dict([node for _, node in ET.iterparse(StringIO(text), \
@@ -31,6 +31,6 @@ class ConverterAbstract(metaclass=abc.ABCMeta):
         self.__xmltree = ET.fromstring(text)
         return self.__xmltree
 
-    def xmlToText(self):
+    def _xmlToText(self):
         __out_txt = ET.tostring(self.__xmltree, encoding='utf8').decode()
         return __out_txt

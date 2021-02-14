@@ -15,7 +15,7 @@ class CutConverter(ConverterAbstract):
 
     def process(self, text: str) -> str:
         # create xmltree from text
-        __xmltree = self.textToXml(text)
+        __xmltree = self._textToXml(text)
 
         # for every tag inside xmltree
         for elem in __xmltree.iter():
@@ -24,4 +24,4 @@ class CutConverter(ConverterAbstract):
                 elem.text = elem.text[0:self.TRIM_LEN]
 
         # create text back from xmltree
-        return self.xmlToText()
+        return self._xmlToText()
