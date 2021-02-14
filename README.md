@@ -52,7 +52,7 @@ Implementation
 
 Class Diagram
 --------------
-![Class Diagram](class-diagram.png)
+![Class Diagram](class_diagram.png)
 
 Authors
 -------
