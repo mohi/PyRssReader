@@ -5,7 +5,8 @@ PyRssReader
 
 Sample RSS Reader to perform multiple text processing on xml text of a rss feed.  
 Reads from a variety of inputs sources and Writes to a variety of outputs
-desination are supported. PyRssReader deliberately has OOPS as design pattern to demonstrate OOPS in python.  
+desination are supported.  
+PyRssReader deliberately has OOPS as design pattern to demonstrate OOPS in python.  
 
 Usage
 -----
