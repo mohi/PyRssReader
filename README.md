@@ -3,8 +3,8 @@ PyRssReader
 
 [![Latest Travis CI build status](https://travis-ci.org/kragniz/cookiecutter-pypackage-minimal.png)](https://travis-ci.org/kragniz/cookiecutter-pypackage-minimal)
 
-Sample RSS Reader to perform multiple text processing on xml text of a rss feed. Reads
-from a variety of inputs sources and Writes to a variety of outputs
+Sample RSS Reader to perform multiple text processing on xml text of a rss feed.  
+Reads from a variety of inputs sources and Writes to a variety of outputs
 desination are supported.
 
 Usage
