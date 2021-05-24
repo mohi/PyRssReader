@@ -13,9 +13,9 @@ Usage
 Sample command
 
 ``` {.sourceCode .}
-python PyRssReader --input http://tech.uzabase.com/ --convert="cut,replace(/base/acid/)" -o tmp.txt
-python PyRssReader --input http://tech.uzabase.com/ --convert=cut
-python PyRssReader --input articles.txt --convert="replace(/Uzabase/uzabase/)" -o out.txt
+python PyRssReader --input http://globalissues.org/news/ --convert="cut,replace(/base/acid/)" -o tmp.txt
+python PyRssReader --input http://globalissues.org/news/ --convert=cut
+python PyRssReader --input articles.txt --convert="replace(/social/Social/)" -o out.txt
 ```
 
 ``` {.sourceCode .}
